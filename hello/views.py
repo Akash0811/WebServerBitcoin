@@ -37,9 +37,9 @@ def db(request):
     num = NumRegex.findall(string1)
     
     # Add the entry to the table
-    alert = Alert(d1 = date_string,
+    alert = Alert.objects.create(d1 = date_string,
                   t1 = time_string,
-                  price = num[0])
+                  price = float(num[0]))
     alert.save()
 
     alerts = Alert.objects.all()
