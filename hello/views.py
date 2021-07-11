@@ -15,8 +15,7 @@ time_string = now.strftime('%H.%M')
 
 # Create your views here.
 def index(request):
-    times = int(os.environ.get('TIMES',3))
-    return HttpResponse('Hello!'*times,'Please go to /db to know the price')
+    return render("index.html")
 
 
 def db(request):
