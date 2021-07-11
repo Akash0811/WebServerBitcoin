@@ -4,17 +4,48 @@
 {% block content %}
   <div class="container">
 
+<head>
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+<body>
 
-<h2>Page View Report</h2>
+<h2>Bitcoin Alerts</h2>
 
-
-<ul>
-
-{% for greeting in greetings %}
-    <li>{{ greeting.when }}</li>
-{% endfor %}
-
-</ul>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Time</th> 
+    <th>Price</th>
+  </tr>
+  {% for alert in alerts %}
+  <tr>
+    <td>{{ alert.d1 }}</td>
+    <td>{{ alert.t1 }}</td>
+    <td>{{ alert.price }}</td>
+  </tr>
+  {% endfor %}
 
 </div>
 
