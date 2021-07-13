@@ -1,4 +1,8 @@
-# Python: Getting Started
+# Web Server Showing Bitcoin Data
+
+> **Clone** of below getting started app, please see the link on **Heroku** and read below.
+
+## Python: Getting Started
 
 A barebones Django app, which can easily be deployed to Heroku.
 

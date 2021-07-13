@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+
+
+<h2>Bitcoin Alerts</h2>
+
+
+<ul>
+
+{% for alert in alerts %}
+    <li>{{ alert.d1 }}</li>
+    <li>{{ alert.t1 }}</li>
+    <li>{{ alert.price }}</li>
+{% endfor %}
+
+</ul>
+
+</div>
+
+{% endblock %}
